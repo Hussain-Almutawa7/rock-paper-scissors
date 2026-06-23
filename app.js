@@ -1,13 +1,24 @@
 const choices = document.querySelector("#button-action");
-let userChoice = "";
+let userChoice;
 
 const computerChoice = ["rock", "paper", "scissor"];
 const computerSelect = Math.floor(Math.random() * computerChoice.length)
-const computerPick = computerChoice[computerSelect];
+let computerPick = computerChoice[computerSelect];
 
 choices.addEventListener("click", e => {
     userChoice = e.target.id;
-    console.log(userChoice)
 })
 
-
+function gameLogic(user, computer) {
+    if(user === computer) {
+        console.log("draw")
+    } else if (
+        (user === "rock" && computer === "scissors") || 
+        (user === "paper" && computer === "rock") || 
+        (user === "scissors" && computer === "paper")
+    ) {
+        console.log("You win")
+    } else {
+        console.log("you lose")
+    }
+}
