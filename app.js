@@ -18,6 +18,8 @@ let computerPoints = 0;
 let tiePoints = 0;
 
 choices.addEventListener("click", e => {
+    if(!e.target.matches("button")) return
+
     userChoice = e.target.id;
 
     const computerSelect = Math.floor(Math.random() * computerChoice.length)

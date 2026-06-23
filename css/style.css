@@ -9,10 +9,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.results-display p {
-    display: inline-block;
-}
-
 .user-choice {
     border: none;
     font-size: 80px;
@@ -46,4 +42,13 @@ body {
 #result {
     font-size: 30px;
     font-weight: bold;
+}
+
+#display-choice {
+    font-size: 20px;
+    text-align: center;
+}
+
+#results-display {
+    margin-bottom: 20px;
 }
